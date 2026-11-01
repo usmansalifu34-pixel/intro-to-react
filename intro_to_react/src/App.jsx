@@ -1,7 +1,10 @@
-import { useState } from 'react'
+import { useState ,useEffect} from 'react'
 import './App.css'
 const Card = ({name,age,gender})=>{
   const [currentAge,setAge] = useState(age)
+  useEffect(() => {
+    console.log(`${name} is a year older, the ${gender} is ${currentAge} years old`)
+  })
   return (<div className='box'>
   <h2>{name}</h2>
   <h3>{currentAge}</h3>
